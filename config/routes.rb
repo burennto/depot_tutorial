@@ -1,4 +1,9 @@
 DepotTutorial::Application.routes.draw do
+  
+  root :to => 'store#index', :as => 'store'
+  
+  get "store/index"
+
   resources :products
 
   # The priority is based upon order of creation:
