@@ -13,6 +13,10 @@
     = @page_title || "Pragmatic Bookshelf"
   #columns
     #side
+      #cart
+        - if @cart
+          = hidden_div_if(@cart.line_items.empty?, :id => "cart") do
+            = render @cart
       %a{ :href => "http://www...." } Home
       %br
       %a{ :href => "http://www..../faq" } Questions
@@ -24,4 +28,4 @@
     #main
       = yield
   
-  = debug(params) if Rails.env.development?  
+  = debug(params) if Rails.env.development?

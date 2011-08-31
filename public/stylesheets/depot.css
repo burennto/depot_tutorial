@@ -66,18 +66,18 @@
 
 /* An entry in the store catalog */
 
-#store  .entry {
+#store .entry {
   overflow: auto;
   margin-top: 1em;
   border-bottom: 1px dotted #77d;
 }
 
-#store  .title {
+#store .title {
   font-size: 120%;
   font-family: sans-serif;
 }
 
-#store .entry img {
+#store .entry img, .product_img {
   width: 80px;
   margin-right: 5px;
   margin-bottom: 5px;
@@ -167,4 +167,17 @@
 #store .total_line .total_cell {
   font-weight: bold;
   border-top: 1px solid #595;
+}
+
+/* Styles for the cart in the sidebar */
+
+#cart, #cart table {
+  font-size: smaller;
+  color: white;
+}
+
+#cart table {
+  border-top: 1px dotted #595;
+  border-bottom: 1px dotted #595;
+  margin-bottom: 10px;
 }
