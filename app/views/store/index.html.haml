@@ -4,7 +4,7 @@
 - if enough_visits(@visits)
   You have visited this page #{pluralize(@visits, 'time')}.
 
-%h1 Your Pragmatic Catalog
+%h1= t('.title_html')
 
 - @products.each do |product|
   .entry
@@ -14,4 +14,4 @@
     = sanitize(product.description)
     .price_line
       %span.price= number_to_currency(product.price)
-      = button_to 'Add to Cart', line_items_path(:product_id => product), :remote => true
+      = button_to t('.add_html'), line_items_path(:product_id => product), :remote => true
