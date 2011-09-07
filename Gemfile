@@ -10,11 +10,15 @@ gem 'sqlite3'
 gem 'haml', '3.1.2'
 gem 'will_paginate', '>= 3.0.pre'
 
+group :production do
+  gem 'mysql'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
